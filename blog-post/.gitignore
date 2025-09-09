@@ -1,0 +1,8 @@
+# Ignore virtual environment
+.venv/
+
+# Ignore environment variables
+.env
+
+# ignore local db script
+db.py
