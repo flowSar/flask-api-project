@@ -17,7 +17,8 @@ dbManager = DbManager()
 def home():
     all_posts = dbManager.get_all_posts()
     username = session.get('username')
-    return render_template('home.html', posts=all_posts, username=username)
+    user_id = session.get('user_id')
+    return render_template('home.html', posts=all_posts, username=username, user_id=user_id)
 
 @app.route('/signin', methods=['GET', 'POST'])
 def sign_in():

@@ -134,6 +134,8 @@
               {{ post['title'] }}
             </h3>
             <div class="flex items-center gap-2">
+              <!-- we check if this post elong to the log in user with user_id -->
+              {% if post['user_id'] == user_id %}
               <!-- Delete Button -->
               <form
                 method="GET"
@@ -215,6 +217,7 @@
                   </div>
                 </div>
               </div>
+              {% endif %}
             </div>
           </div>
 
